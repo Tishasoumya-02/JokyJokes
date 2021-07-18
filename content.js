@@ -8,10 +8,11 @@ chrome.runtime.onMessage.addListener(function(msg,sender,response)
             console.log("error")
             return;
           }
-          res.json().then(function(data) {
+          res.json().then(function(data)
+           {
               console.log(data);
-              alert(data[0].setup+" 🤔");
-              alert(data[0].punchline+" 😆");
+            alert(data.setup+" 🤔");
+              alert(data.punchline +" 🤣");
           });
         }).catch(function(err) {
          console.log(err);
