@@ -5,7 +5,7 @@
     "description":"Will Keep You Entertained",
     "content_scripts":[
         {
-            "matches":["http://*/*"],
+            "matches":["<all_urls>"],
             "js":["content.js"]
         }
     ],
