@@ -1,7 +1,7 @@
 
 chrome.runtime.onMessage.addListener(function(msg,sender,response)
 {
-    var url="https://official-joke-api.appspot.com/jokes/random";
+    var url="https://v2.jokeapi.dev/joke/Any?type=single";
     fetch(url).then(function(res)
     {
         if (res.status !== 200) {
@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(function(msg,sender,response)
            {
               console.log(data);
             alert(data.setup+" 🤔");
-              alert(data.punchline +" 🤣");
+              alert(data.delivery +" 🤣");
           });
         }).catch(function(err) {
          console.log(err);
